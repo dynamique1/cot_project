@@ -14,8 +14,8 @@ class CotSpiderSpider(scrapy.Spider):
         
         for table_links in tables:
             for link in table_links:
-                if not link.endswith("2006_2016.zip"):
-                    if not link.endswith("deacot1986_2016.zip"):
+                # if not link.endswith("2006_2016.zip"):
+                #     if not link.endswith("deacot1986_2016.zip"):
                         targetlink = response.urljoin(link)
                         yield scrapy.Request(url=targetlink, callback=self.download_files)
             
