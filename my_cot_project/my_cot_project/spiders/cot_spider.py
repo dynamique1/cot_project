@@ -24,7 +24,7 @@ class CotSpiderSpider(scrapy.Spider):
 
     def download_files(self, response):
         path = response.url.split('/')[-1]
-        dirf = r"C:\Users\ABEES_SIGNATURE\Documents\cot_data"
+        dirf = r"C:\Users\ABEES_SIGNATURE\Documents\cot_data_new"
         if not os.path.exists(dirf):
             os.makedirs(dirf)
         os.chdir(dirf)
